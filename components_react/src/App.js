@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {  
     return (
       <section>
-        <InfoPerson name = 'Kcire' age = { 162 } />
+        <InfoPerson />
       </section>
     )
   }

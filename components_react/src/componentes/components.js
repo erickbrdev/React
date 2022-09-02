@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types"
+import bpt from "./data";
 
 class InfoPerson extends Component {
-    render() {
-        const hobbies = ['Futebol', 'Teclado musical', 'Games']
-        const { name, age } = this.props
-        const map = hobbies.map((hobbie, index) => <li key={index}>{hobbie}</li> )
+    render() {   
+         const info = bpt         
         return (
-            <div>
-                <h2>{name}</h2>
-                <p>{age}</p>
-                <h4>Hobbies: {map}                    
-               </h4>
-            </div>
+             info.map((person) => {
+                return  <div>
+                            <h1> Nick: { person.nick } </h1>
+                            <h2> Classe: { person.classe } </h2>
+                            <p>  Level: { person.level } </p>
+                        </div>
+            })
         )
     }
 }
