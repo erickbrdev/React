@@ -12,16 +12,22 @@ class App extends React.Component {
     };
   }
    handleClick () {
+    // const btn = document.querySelector('.btn')
+
     this.setState((previousState, _props) => ({
       click: previousState.click +1
     }));
+
+    if(this.state.click % 2 !== 0) {    
+      console.log('Verde')
+    }
   };
   
   render() {
     const { click } = this.state
     return (
       <div>
-        <button onClick={this.handleClick}>{click}</button>        
+        <button id='btn' onClick={this.handleClick}>{click}</button>        
       </div>     
     )
   }
