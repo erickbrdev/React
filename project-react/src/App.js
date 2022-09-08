@@ -1,33 +1,31 @@
 import React from 'react';
 import './App.css';
+import Country from './data';
 class App extends React.Component {
   
   constructor() {
     super();
 
-    this.handleClick = this.handleClick.bind(this) 
+    this.handleChange = this.handleChange.bind(this) 
     
     this.state = {
-      click: 0,
+      name: ''
     };
   }
-   handleClick () {
-    // const btn = document.querySelector('.btn')
-
-    this.setState((previousState, _props) => ({
-      click: previousState.click +1
-    }));
-
-    if(this.state.click % 2 !== 0) {    
-      console.log('Verde')
-    }
-  };
-  
-  render() {
-    const { click } = this.state
+   handleChange(e) {
+    this.setState({ name: e.target.value })
+  };  
+  render() {    
     return (
       <div>
-        <button id='btn' onClick={this.handleClick}>{click}</button>        
+        <input type="text" onChange={this.handleChange} />
+        <ul>
+          { 
+            Country
+            .filter((item) => item.name.includes(this.state.name))
+            .map((elem, index) => <li key={index}>{elem.name}</li>)
+          }
+        </ul>                  
       </div>     
     )
   }
