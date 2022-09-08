@@ -1,25 +1,27 @@
 import React from 'react';
 import './App.css';
-
-
-
-
 class App extends React.Component {
   
   constructor() {
-    super()
+    super();
 
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this) 
+    
+    this.state = {
+      click: 0,
+    };
   }
    handleClick () {
-    console.log(this)
-    console.log('Teste')
-  }
+    this.setState((previousState, _props) => ({
+      click: previousState.click +1
+    }));
+  };
   
   render() {
+    const { click } = this.state
     return (
       <div>
-        <button onClick={this.handleClick}>Click</button>        
+        <button onClick={this.handleClick}>{click}</button>        
       </div>     
     )
   }
