@@ -22,8 +22,11 @@ li {
   padding: 5px;
 }
 
-input {
-  padding: 7px;
+input {  
+  width: 80%;
+  border: double 5px solid black;
+  margin-left: 5px;
+  padding: 3px;
   margin-top: 25px;
   margin-bottom: 20px;
   font-size: xx-large;
