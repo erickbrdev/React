@@ -8,13 +8,11 @@ import './App.css';
 class App extends React.Component {
   render() {
     return(
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={HeroTitle} />
-          <h1>React is wonderful</h1>
-          <Route path="/home/" render={ () => <HomePage title="Programmer on the way" />} />
-          <Route path="/about" component={About} />
-        </Switch>
+      <BrowserRouter>        
+        <h1>React is wonderful</h1>
+        <Route exact path="/" component={HeroTitle} />
+        <Route path="/home/" render={ () => <HomePage title="Programmer on the way" />} />
+        <Route path="/about" component={About} />       
       </BrowserRouter>
     )
   }
