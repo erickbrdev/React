@@ -11,7 +11,7 @@ class App extends React.Component {
       <BrowserRouter>
       <h1>React is wonderful</h1>
       <Route exact path="/" component={HeroTitle} />
-      <Route path="/home" component={HomePage} />
+      <Route path="/home/" render={ () => <HomePage title="Programmer on the way" />} />
       <Route path="/about" component={About} />
       </BrowserRouter>
     )

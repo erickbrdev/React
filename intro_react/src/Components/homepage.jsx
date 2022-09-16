@@ -2,8 +2,10 @@ import React from "react";
 
 class HomePage extends React.Component {
     render() {
-        return (
-            <h1>Programmer on the way</h1>
+        const { title } = this.props
+        // const { name } = this.props.match.params
+        return (            
+            <h1> React JS { title }</h1>
         )
     }
 }
