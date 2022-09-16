@@ -14,6 +14,15 @@ class App extends React.Component {
         <Route path="/home/" render={ () => <HomePage title="Programmer on the way" />} />
         <Route path="/about" component={About} />       
       </BrowserRouter>
+
+      //Demonstração do componente Redirect
+      
+      //   <Switch>
+      //   <Route path="/dashboard" component={Dashboard} />
+      //   <Route exact path="/">
+      //     {logado ? <Redirect to="/dashboard" /> : <Login />}
+      //   </Route>
+      // </Switch>
     )
   }
   
