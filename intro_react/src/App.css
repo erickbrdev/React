@@ -5,3 +5,25 @@ h1 {
   border: 5px solid rgb(4, 0, 255);
   width: 200px;
 }
+
+.about {
+  padding: 8px;
+  color: black;
+  text-decoration: none;
+  opacity: 0.8;
+  font-size: xx-large;
+  font-style: italic;
+}
+
+.homepage {
+    padding: 8px;
+    color: black;
+    text-decoration: none;
+    opacity: 0.8;
+    font-size: xx-large;
+    font-style: italic;  
+}
+
+.about:hover {
+  opacity: 1;
+}
