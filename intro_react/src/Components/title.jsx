@@ -6,7 +6,10 @@ class HeroTitle extends Component {
         return (
             <div>
                 <h1>React  is amazing</h1>
-                <Link to="/about" className="about"> About </Link>
+                <div className="div-link">
+                    <Link to="/about" className="about"> About </Link>
+                    <Link to="/home" className="about"> Home </Link>                   
+                </div>
             </div>
         )
     }

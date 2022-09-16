@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import HeroTitle from './Components/title';
 import HomePage from './Components/homepage';
 import About from './Components/about';
@@ -9,10 +9,12 @@ class App extends React.Component {
   render() {
     return(
       <BrowserRouter>
-      <h1>React is wonderful</h1>
-      <Route exact path="/" component={HeroTitle} />
-      <Route path="/home/" render={ () => <HomePage title="Programmer on the way" />} />
-      <Route path="/about" component={About} />
+        <Switch>
+          <Route exact path="/" component={HeroTitle} />
+          <h1>React is wonderful</h1>
+          <Route path="/home/" render={ () => <HomePage title="Programmer on the way" />} />
+          <Route path="/about" component={About} />
+        </Switch>
       </BrowserRouter>
     )
   }

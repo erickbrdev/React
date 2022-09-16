@@ -1,7 +1,8 @@
 h1 {
   text-align: center;
   padding: 8px;
-  color: rgb(49, 49, 255);
+  background-color: black;
+  color: rgb(255, 255, 255);
   border: 5px solid rgb(4, 0, 255);
   width: 200px;
 }
@@ -26,4 +27,11 @@ h1 {
 
 .about:hover {
   opacity: 1;
+}
+
+.div-link {
+  border: 3px double rgb(0, 0, 0);
+  width: 300px;
+  display: flex;
+  flex-flow: column wrap;
 }
